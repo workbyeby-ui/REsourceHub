@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Products | ResourceHub Industrial Excellence</title>
+<!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#dfe2eb",
+                    "surface-dim": "#d7dae3",
+                    "on-tertiary-fixed": "#341100",
+                    "on-tertiary-fixed-variant": "#723612",
+                    "on-primary-fixed": "#001355",
+                    "on-secondary-fixed-variant": "#8e130c",
+                    "inverse-primary": "#b8c3ff",
+                    "primary-fixed": "#dde1ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#351100",
+                    "tertiary-container": "#562100",
+                    "surface-container-low": "#f1f3fc",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdbcb",
+                    "surface-container-high": "#e5e8f1",
+                    "body-text": "#1C1C1E",
+                    "surface-container-highest": "#dfe2eb",
+                    "on-secondary-container": "#650001",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "on-surface-variant": "#454650",
+                    "on-surface": "#181c22",
+                    "surface": "#f8f9ff",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "off-white": "#F5F7FA",
+                    "primary-container": "#1a2b6d",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#eef0f9",
+                    "secondary-fixed": "#ffdad5",
+                    "mid-gray": "#E8ECF0",
+                    "error-container": "#ffdad6",
+                    "secondary": "#b02d21",
+                    "outline": "#767681",
+                    "on-error": "#ffffff",
+                    "surface-container": "#ebeef7",
+                    "inverse-surface": "#2d3137",
+                    "secondary-fixed-dim": "#ffb4a9",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "on-background": "#181c22",
+                    "surface-tint": "#4b5a9e",
+                    "background": "#f8f9ff",
+                    "on-primary-container": "#8695dd",
+                    "secondary-container": "#fc6451",
+                    "muted-text": "#6B7280",
+                    "outline-variant": "#c6c5d2",
+                    "on-secondary-fixed": "#410000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-py-mobile": "4rem",
+                    "section-py-desktop": "6rem",
+                    "margin-desktop": "4rem",
+                    "margin-tablet": "2rem",
+                    "max-width": "1280px",
+                    "margin-mobile": "1rem",
+                    "gutter": "1.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Poppins"],
+                    "display-hero-mobile": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "body-lg": ["Poppins"],
+                    "headline-lg-mobile": ["Poppins"],
+                    "display-hero": ["Poppins"],
+                    "headline-lg": ["Poppins"],
+                    "label-caps": ["Poppins"],
+                    "caption": ["Poppins"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-hero-mobile": ["42px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "caption": ["13px", {"lineHeight": "1.4", "fontWeight": "300"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .active-filter-red {
+            border-left: 4px solid #b02d21;
+            padding-left: 12px;
+            color: #b02d21;
+            font-weight: 600;
+        }
+        .product-card-hover:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-card-hover:hover {
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-md border-b border-outline-variant dark:border-primary-container shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                ResourceHub
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface dark:text-surface-bright hover:text-secondary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Home</a>
+<a class="text-on-surface dark:text-surface-bright hover:text-secondary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Products</a>
+<a class="text-on-surface dark:text-surface-bright hover:text-secondary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Industries</a>
+<a class="text-on-surface dark:text-surface-bright hover:text-secondary transition-colors font-body-md text-body-md hover:scale-105 transition-transform duration-200" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all">
+                    Get a Quote
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section / Breadcrumb -->
+<header class="pt-32 pb-16 bg-primary dark:bg-on-background relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A high-contrast, professional industrial background featuring rows of steel girders and technical structural elements in a dimly lit warehouse. The lighting is cold and atmospheric with navy and deep grey tones, maintaining a sharp, high-end corporate aesthetic consistent with industrial precision. The mood is powerful and reliable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMYcB8srrMw3i0m4lE1bA9qHFavktNqKdqEEw9jGzsM9tl7oo6FHN4fw8xzCh-Uy-uvFRelMOTG3NylqPAYjcrO_EOyAycSc2hwXm_zzhyAyncDEq2iBW5qsDsnBAVH15x6o02_CWejiK54JvtueaztrgsVJ3q2F5Rxw4Ypd7AfVtmofxsI0-yxKPKHTN8zuLfOAiR3hi-z4o11gYwEuBDaCkRNtvWObpa_Q6vgxBRExwAL8NPNGeQwBYxLzSwgpgYbXVP6WXQUI0"/>
+</div>
+<div class="relative max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
+<span>Home</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-secondary-fixed">Products</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-1 h-10 bg-secondary"></div>
+<h1 class="font-headline-lg text-headline-lg text-surface-bright uppercase">Our Products</h1>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Cluster -->
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-py-desktop">
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filter -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-10">
+<!-- Categories -->
+<div>
+<h3 class="font-headline-md text-[18px] uppercase tracking-wider mb-6 text-primary flex items-center gap-2">
+                        Categories
+                    </h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors block" href="#">All Products</a></li>
+<li><a class="active-filter-red transition-colors block" href="#">Hardware</a></li>
+<li><a class="hover:text-secondary transition-colors block" href="#">Safety</a></li>
+<li><a class="hover:text-secondary transition-colors block" href="#">MEP</a></li>
+<li><a class="hover:text-secondary transition-colors block" href="#">PPE</a></li>
+<li><a class="hover:text-secondary transition-colors block" href="#">Bearings</a></li>
+<li><a class="hover:text-secondary transition-colors block" href="#">Abrasives</a></li>
+</ul>
+</div>
+<!-- Price Range -->
+<div class="pt-6 border-t border-mid-gray">
+<h3 class="font-headline-md text-[18px] uppercase tracking-wider mb-6 text-primary">Price Range</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<input class="rounded-none border-mid-gray text-secondary focus:ring-secondary" id="p1" type="checkbox"/>
+<label class="text-body-md" for="p1">$0 - $500</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="rounded-none border-mid-gray text-secondary focus:ring-secondary" id="p2" type="checkbox"/>
+<label class="text-body-md" for="p2">$500 - $1,500</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="rounded-none border-mid-gray text-secondary focus:ring-secondary" id="p3" type="checkbox"/>
+<label class="text-body-md" for="p3">$1,500+</label>
+</div>
+</div>
+</div>
+<!-- Availability -->
+<div class="pt-6 border-t border-mid-gray">
+<h3 class="font-headline-md text-[18px] uppercase tracking-wider mb-6 text-primary">Availability</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<input class="border-mid-gray text-secondary focus:ring-secondary" id="instock" name="avail" type="radio"/>
+<label class="text-body-md" for="instock">In Stock</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="border-mid-gray text-secondary focus:ring-secondary" id="preorder" name="avail" type="radio"/>
+<label class="text-body-md" for="preorder">Pre-order</label>
+</div>
+</div>
+</div>
+<!-- Banner Callout in Sidebar -->
+<div class="bg-primary p-6 text-surface-bright space-y-4">
+<p class="font-label-caps text-[12px] text-secondary-fixed">Bulk Orders</p>
+<p class="font-headline-md text-[18px]">Industrial Volume Pricing Available</p>
+<button class="border border-surface-bright px-4 py-2 text-[14px] font-bold uppercase hover:bg-surface-bright hover:text-primary transition-all">Learn More</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-mid-gray">
+<p class="text-muted-text font-body-md">Showing <span class="text-on-surface font-bold">1 - 20</span> of 148 products</p>
+<div class="flex items-center gap-2">
+<label class="text-muted-text font-caption">Sort by:</label>
+<select class="bg-transparent border-none focus:ring-0 font-bold text-primary cursor-pointer">
+<option>Newest Arrivals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="product-card-hover group transition-all duration-300 bg-white p-4 flex flex-col h-full border border-transparent hover:border-secondary">
+<div class="aspect-square overflow-hidden bg-off-white mb-4">
+<img class="product-image w-full h-full object-cover transition-transform duration-500" data-alt="A macro photograph of high-precision industrial ball bearings made of polished chrome steel. The image features sharp focal points on the metallic spheres with a clean, bright studio lighting that highlights the technical perfection and industrial quality. The background is a soft, minimalist light grey, emphasizing the product's durability and engineering precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXWcwtiL1G5p9kVpZw-SN3BKa3Rti3VupPdI9DZsR2igpn_83mLMlSry4Hb0qc_LNPnmiLkwKpqHNOWlr6DCXutKXxUjUjTLDtUej-yGoSJIdg14oCk-F8nbxCYNMcpn8EvOAzh-YDn94OQf6fvOjGJtcXx_-G3s4txbUPeo3hl4f0nz1DUKOifRtQqwcQFaXp6Kms14ndBPc4eduC1My9GJ6s3gBrz2X1o8zOjFDQ7mdXQFtdXuaeNkMyfflvwR3sjacweyXnosA"/>
+</div>
+<div class="flex-1">
+<span class="font-label-caps text-[10px] text-muted-text uppercase tracking-widest mb-1 block">Hardware</span>
+<h4 class="font-headline-md text-[16px] text-primary group-hover:text-secondary transition-colors mb-2">Precision Steel Ball Bearing Set</h4>
+</div>
+<div class="mt-4 pt-4 border-t border-mid-gray flex justify-between items-end">
+<span class="text-secondary font-bold">$124.99</span>
+<a class="text-secondary font-bold text-[14px] flex items-center gap-1" href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card-hover group transition-all duration-300 bg-white p-4 flex flex-col h-full border border-transparent hover:border-secondary">
+<div class="aspect-square overflow-hidden bg-off-white mb-4">
+<img class="product-image w-full h-full object-cover transition-transform duration-500" data-alt="A detailed shot of a professional-grade industrial safety helmet in bright signal red. The helmet sits on a textured concrete surface under strong, direct overhead lighting that creates crisp shadows, suggesting a construction site environment. The design is modern, sleek, and high-performance, reflecting strict safety standards and industrial durability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfqg1_aMj3SXDUos9xFnnveGs5dl3jl-GielBQ8tvcNrSji2jXWOACkXSEoeUnGz7GUpXTMbbJMMuA5P5RFc3RjX_ATnRkw1SmtEa0zIQIh90hlZGc8MyMslTO0Zcs52f1dVyAqYArYi9pPCTzYAsMbR8PiPdRpdWp9Atn9xGkEB6iNTlKJh7JvFhRNnm6MESOjT06DOtZFOzQAI8jRZUPFQqJB5W8mu5u4Oz8_ElZNOA5VCg22tZGc9M4UvKfzzvAFYojzZkqfxE"/>
+</div>
+<div class="flex-1">
+<span class="font-label-caps text-[10px] text-muted-text uppercase tracking-widest mb-1 block">Safety</span>
+<h4 class="font-headline-md text-[16px] text-primary group-hover:text-secondary transition-colors mb-2">V-Gard Industrial Safety Helmet</h4>
+</div>
+<div class="mt-4 pt-4 border-t border-mid-gray flex justify-between items-end">
+<span class="text-secondary font-bold">$45.00</span>
+<a class="text-secondary font-bold text-[14px] flex items-center gap-1" href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Repeat for 20 cards total (Simplified loop in demo) -->
+<!-- Card 3 -->
+<div class="product-card-hover group transition-all duration-300 bg-white p-4 flex flex-col h-full border border-transparent hover:border-secondary">
+<div class="aspect-square overflow-hidden bg-off-white mb-4">
+<img class="product-image w-full h-full object-cover transition-transform duration-500" data-alt="A professional heavy-duty cordless impact driver tool resting against a blueprint on a wooden workbench. The lighting is warm and detailed, highlighting the rugged textures and ergonomic design of the hardware. The color palette is industrial, featuring navy blues and metallic silvers with a bright red battery indicator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOZ909w63R1EXvyCvltrwND8G7RR8GITNAy57OPjTBYlyAHAimhftltO39w3DvnpvXqpFC0FD1nG2MagsZtkn5YOf0Xyb1lRz0X0fCg7lR2jBlwvu7IlCrx04E5n0pmNfaaYAiC8_jGctX12zy3wUQD7GFiWT5cSYa3-fTIDbtpKY045hwoblv8-EF1lYZz3cQLqeUf8qwaNH2wGCX7GceviRg1f1k3Qs8ePIRPX91e-bACFRr5AUgvUuSPtelK5_6ZioPKDoN-zI"/>
+</div>
+<div class="flex-1">
+<span class="font-label-caps text-[10px] text-muted-text uppercase tracking-widest mb-1 block">Hardware</span>
+<h4 class="font-headline-md text-[16px] text-primary group-hover:text-secondary transition-colors mb-2">HD-X1 Impact Drill Pro</h4>
+</div>
+<div class="mt-4 pt-4 border-t border-mid-gray flex justify-between items-end">
+<span class="text-secondary font-bold">$299.00</span>
+<a class="text-secondary font-bold text-[14px] flex items-center gap-1" href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="product-card-hover group transition-all duration-300 bg-white p-4 flex flex-col h-full border border-transparent hover:border-secondary">
+<div class="aspect-square overflow-hidden bg-off-white mb-4">
+<img class="product-image w-full h-full object-cover transition-transform duration-500" data-alt="A clean, studio-lit photo of industrial electrical wiring components and modular circuit breakers. The components are arranged symmetrically on a white surface, showcasing professional MEP equipment. The aesthetic is clean-room sterile with high contrast between the technical plastic casings and copper terminals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1dDpsGRmbCzo4PffFdjdohWso1QoDhkKYnQ7w0cvHLOC9gxsTASGDfvo0rjNkts-MIKp3hLTM37f690rorJChke7dr1CifDKjU-1eFq2spbBaZH2W1wEMMDwVlhsu_2cTwfNJcv_zZVfw1Qix6RAdYWieiHTb9_ug2p0KPoC1c_Wg0WrUNwSOiGmX3i9T_2zl5jPb2C42JnjaLGkCPElMipTxLW60WcwxMOjvX_bp_14BMru_urf3t8WD0ddeGhvIHbHykdxKPdY"/>
+</div>
+<div class="flex-1">
+<span class="font-label-caps text-[10px] text-muted-text uppercase tracking-widest mb-1 block">MEP</span>
+<h4 class="font-headline-md text-[16px] text-primary group-hover:text-secondary transition-colors mb-2">Modular Circuit Breaker System</h4>
+</div>
+<div class="mt-4 pt-4 border-t border-mid-gray flex justify-between items-end">
+<span class="text-secondary font-bold">$18.50</span>
+<a class="text-secondary font-bold text-[14px] flex items-center gap-1" href="#">
+                                View Details
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Additional 16 cards would follow similar pattern. Generating placeholders for the visual grid -->
+<script>
+                        const grid = document.querySelector('.grid');
+                        const productData = [
+                            { name: "Heavy Duty Work Gloves", price: "$12.99", category: "PPE", img: "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Diamond Grinding Wheel", price: "$85.00", category: "Abrasives", img: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Stainless Steel Bolt Kit", price: "$42.00", category: "Hardware", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee7a?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Industrial Air Filter", price: "$120.00", category: "MEP", img: "https://images.unsplash.com/photo-1595191028527-dc0809244033?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Reflective Safety Vest", price: "$9.50", category: "PPE", img: "https://images.unsplash.com/photo-1618176582531-97f26c9f698d?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Titanium Drill Bit Set", price: "$55.90", category: "Hardware", img: "https://images.unsplash.com/photo-1534398079244-67c8ad88f4e7?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Safety Eye Goggles", price: "$15.00", category: "Safety", img: "https://images.unsplash.com/photo-1581093583449-80d50ad7623d?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Copper Piping - 2m", price: "$28.00", category: "MEP", img: "https://images.unsplash.com/photo-1621905252507-b354bcadcabc?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Abrasive Sanding Belts", price: "$34.00", category: "Abrasives", img: "https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Heavy Load Caster Wheels", price: "$44.00", category: "Hardware", img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Heat Resistant Apron", price: "$65.00", category: "PPE", img: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Digital Pressure Gauge", price: "$110.00", category: "MEP", img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Angle Grinder Disk", price: "$12.00", category: "Abrasives", img: "https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Carbon Steel Chain", price: "$89.00", category: "Hardware", img: "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Emergency Wash Station", price: "$450.00", category: "Safety", img: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=800&auto=format&fit=crop" },
+                            { name: "Sealed Ball Bearing Kit", price: "$195.00", category: "Bearings", img: "https://images.unsplash.com/photo-1581235720704-06d3acfcba80?q=80&w=800&auto=format&fit=crop" }
+                        ];
+
+                        productData.forEach(prod => {
+                            const card = `
+                            <div class="product-card-hover group transition-all duration-300 bg-white p-4 flex flex-col h-full border border-transparent hover:border-secondary">
+                                <div class="aspect-square overflow-hidden bg-off-white mb-4">
+                                    <img src="${prod.img}" 
+                                         class="product-image w-full h-full object-cover transition-transform duration-500"
+                                         data-alt="A professional product shot of ${prod.name} for industrial use. The scene is brightly lit with high-end commercial photography lighting, highlighting the metallic or technical textures of the equipment. Set against a clean, neutral architectural background, the product exudes a sense of reliability, precision engineering, and professional B2B quality in a modern light-mode palette.">
+                                </div>
+                                <div class="flex-1">
+                                    <span class="font-label-caps text-[10px] text-muted-text uppercase tracking-widest mb-1 block">${prod.category}</span>
+                                    <h4 class="font-headline-md text-[16px] text-primary group-hover:text-secondary transition-colors mb-2">${prod.name}</h4>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-mid-gray flex justify-between items-end">
+                                    <span class="text-secondary font-bold">${prod.price}</span>
+                                    <a href="#" class="text-secondary font-bold text-[14px] flex items-center gap-1">
+                                        View Details
+                                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>`;
+                            grid.innerHTML += card;
+                        });
+                    </script>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-mid-gray text-primary hover:border-secondary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-secondary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-mid-gray text-primary hover:border-secondary transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-mid-gray text-primary hover:border-secondary transition-colors">3</button>
+<span class="text-muted-text">...</span>
+<button class="w-10 h-10 flex items-center justify-center border border-mid-gray text-primary hover:border-secondary transition-colors">8</button>
+<button class="w-10 h-10 flex items-center justify-center border border-mid-gray text-primary hover:border-secondary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t-4 border-secondary bg-primary dark:bg-on-background">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-py-mobile md:py-section-py-desktop px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto text-surface-bright">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-surface-bright">ResourceHub</div>
+<p class="font-body-md text-surface-variant max-w-xs">Leading provider of high-grade building materials and industrial hardware solutions for global construction leaders.</p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-surface-variant/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-variant/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed">Quick Links</h4>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">About Us</a></li>
+<li><a class="text-secondary-fixed font-bold" href="#">Products</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">Our Projects</a></li>
+<li><a class="text-surface-variant hover:text-secondary-fixed transition-colors" href="#">News &amp; Updates</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed">Contact Info</h4>
+<ul class="space-y-4 font-body-md text-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+                        1224 Industrial Way,<br/>Logistics Hub, Dubai UAE
+                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed">phone</span>
+                        +971 4 000 0000
+                    </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+                        supply@resourcehub.com
+                    </li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary-fixed">Newsletter</h4>
+<p class="text-caption">Get the latest pricing and inventory updates.</p>
+<form class="flex">
+<input class="bg-primary-container border-none p-3 flex-1 text-surface-bright placeholder:text-surface-variant/50 focus:ring-1 focus:ring-secondary" placeholder="Email address" type="email"/>
+<button class="bg-secondary px-4 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="border-t border-surface-variant/10 py-6 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-caption text-surface-variant/60">
+<p>© 2024 ResourceHub. All rights reserved. Industrial Excellence.</p>
+<div class="flex gap-6">
+<a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Cookie Policy</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Site Map</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple sticky header interaction
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('bg-surface/80');
+                nav.classList.add('bg-white');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.remove('bg-white');
+                nav.classList.add('bg-surface/80');
+            }
+        };
+    </script>
+</body></html>
