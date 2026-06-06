@@ -1,28 +1,58 @@
 'use client'
 
 import { useState } from 'react'
-import { Send } from 'lucide-react'
+import { Send, Loader2 } from 'lucide-react'
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
+    setStatus('loading')
+
+    const form = e.currentTarget
+    const data = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      company: (form.elements.namedItem('company') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        const json = await res.json()
+        setErrorMsg(json.error || 'Something went wrong. Please try again.')
+        setStatus('error')
+      }
+    } catch {
+      setErrorMsg('Network error. Please check your connection and try again.')
+      setStatus('error')
+    }
   }
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
         <div className="w-16 h-16 bg-accent flex items-center justify-center">
           <Send size={28} className="text-white" />
         </div>
-        <h3 className="font-poppins font-bold text-primary text-xl">Message Received</h3>
+        <h3 className="font-poppins font-bold text-primary text-xl">Message Sent Successfully</h3>
         <p className="text-muted max-w-sm">
           Thank you for reaching out. Our team will get back to you within 1 business day.
         </p>
         <button
-          onClick={() => setSubmitted(false)}
+          onClick={() => setStatus('idle')}
           className="text-accent text-sm font-semibold hover:underline mt-2"
         >
           Send another message
@@ -107,11 +137,22 @@ export default function ContactForm() {
         />
       </div>
 
+      {status === 'error' && (
+        <p className="text-accent text-sm border border-accent/30 bg-accent/5 px-4 py-3">
+          {errorMsg}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-accent text-white font-bold py-4 text-sm tracking-wide hover:bg-accent-dark active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2"
+        disabled={status === 'loading'}
+        className="w-full bg-accent text-white font-bold py-4 text-sm tracking-wide hover:bg-accent-dark active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
       >
-        Send Message <Send size={16} />
+        {status === 'loading' ? (
+          <><Loader2 size={16} className="animate-spin" /> Sending...</>
+        ) : (
+          <><Send size={16} /> Send Message</>
+        )}
       </button>
     </form>
   )

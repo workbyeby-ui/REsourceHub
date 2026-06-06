@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 import ContactForm from '@/components/contact/ContactForm'
 import SectionHeading from '@/components/ui/SectionHeading'
 
@@ -83,6 +83,21 @@ export default function ContactPage() {
                     <p className="text-muted text-sm">Saturday: 9:00 AM — 1:00 PM</p>
                   </div>
                 </div>
+
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/971588892476?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20from%20ResourceHub."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-6 bg-[#25D366] hover:bg-[#1ebe5d] transition-colors duration-200 group"
+                >
+                  <MessageCircle size={20} className="text-white shrink-0" />
+                  <div>
+                    <p className="font-semibold text-white text-sm mb-0.5">Chat on WhatsApp</p>
+                    <p className="text-white/80 text-sm">+971 58 889 2476</p>
+                  </div>
+                  <span className="ml-auto text-white/60 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </a>
               </div>
             </div>
 

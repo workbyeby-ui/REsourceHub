@@ -12,13 +12,13 @@ const products = [
     image: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80',
   },
   {
-    name: 'Safety Products',
-    desc: 'Helmets, masks, harnesses, and safety signage',
+    name: 'Adhesive and Lubricant',
+    desc: 'Silicon sealant, PVC glue, WD40 and industrial cleaners',
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80',
   },
   {
     name: 'MEP Solutions',
-    desc: 'Pipes, conduits, fittings and mechanical systems',
+    desc: 'Pipes, conduits, fittings, pumps and mechanical systems',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
   },
   {

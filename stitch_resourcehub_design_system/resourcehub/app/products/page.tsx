@@ -14,16 +14,16 @@ const products = [
     items: ['Bolts, Nuts & Washers', 'Screws & Anchors', 'Hand & Power Tools', 'Industrial Fittings'],
   },
   {
-    name: 'Safety Products',
-    desc: 'Full-spectrum safety solutions to protect workers and comply with UAE safety regulations on every job site.',
+    name: 'Adhesive and Lubricant',
+    desc: 'Industrial adhesives and lubricants for sealing, bonding, and maintenance applications across all job sites.',
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80',
-    items: ['Hard Hats & Helmets', 'Respiratory Protection', 'Fall Arrest Systems', 'Safety Signage'],
+    items: ['Silicon Sealant', 'PVC Glue', 'WD40', 'Cleaner'],
   },
   {
     name: 'MEP Solutions',
     desc: 'Mechanical, electrical, and plumbing materials sourced to specification for contractors and engineers.',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-    items: ['Pipes & Conduits', 'Cable Trays & Trunking', 'Valves & Fittings', 'Junction Boxes'],
+    items: ['Pipes & Conduits', 'Cable Trays & Trunking', 'Valves & Fittings', 'Pumps'],
   },
   {
     name: 'PPE Supplies',

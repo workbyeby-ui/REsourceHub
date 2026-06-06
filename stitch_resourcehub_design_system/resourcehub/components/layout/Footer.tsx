@@ -12,7 +12,7 @@ const quickLinks = [
 
 const categories = [
   'Hardware Consumables',
-  'Safety Products',
+  'Adhesive and Lubricant',
   'MEP Solutions',
   'PPE Supplies',
   'Bearings',
