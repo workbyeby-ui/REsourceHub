@@ -59,8 +59,8 @@ export default function ContactPage() {
                   <Phone size={20} className="text-accent mt-0.5 shrink-0" />
                   <div>
                     <p className="font-semibold text-primary text-sm mb-1">Phone</p>
-                    <a href="tel:+971588892476" className="text-muted text-sm hover:text-accent transition-colors duration-200">
-                      +971 58 889 2476
+                    <a href="tel:+971556568937" className="text-muted text-sm hover:text-accent transition-colors duration-200">
+                      +971 55 656 8937
                     </a>
                   </div>
                 </div>
@@ -69,8 +69,11 @@ export default function ContactPage() {
                   <Mail size={20} className="text-accent mt-0.5 shrink-0" />
                   <div>
                     <p className="font-semibold text-primary text-sm mb-1">Email</p>
-                    <a href="mailto:resourcehub.ae@gmail.com" className="text-muted text-sm hover:text-accent transition-colors duration-200">
-                      resourcehub.ae@gmail.com
+                    <a href="mailto:michael@resourcehubtrading.com" className="block text-muted text-sm hover:text-accent transition-colors duration-200">
+                      michael@resourcehubtrading.com
+                    </a>
+                    <a href="mailto:business@resourcehubtrading.com" className="block text-muted text-sm hover:text-accent transition-colors duration-200">
+                      business@resourcehubtrading.com
                     </a>
                   </div>
                 </div>
@@ -86,7 +89,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/971588892476?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20from%20ResourceHub."
+                  href="https://wa.me/971556568937?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20from%20ResourceHub."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-6 bg-[#25D366] hover:bg-[#1ebe5d] transition-colors duration-200 group"
@@ -94,7 +97,7 @@ export default function ContactPage() {
                   <MessageCircle size={20} className="text-white shrink-0" />
                   <div>
                     <p className="font-semibold text-white text-sm mb-0.5">Chat on WhatsApp</p>
-                    <p className="text-white/80 text-sm">+971 58 889 2476</p>
+                    <p className="text-white/80 text-sm">+971 55 656 8937</p>
                   </div>
                   <span className="ml-auto text-white/60 group-hover:translate-x-1 transition-transform duration-200">→</span>
                 </a>

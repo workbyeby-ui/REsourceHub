@@ -30,10 +30,10 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="ResourceHub Logo"
-              width={594}
-              height={420}
+              width={500}
+              height={500}
               className="object-contain w-auto"
-              style={{ height: '160px' }}
+              style={{ height: '208px' }}
             />
             <p className="text-white/60 text-sm leading-relaxed">
               Your trusted partner for industrial supplies and solutions across Dubai and the UAE.
@@ -51,7 +51,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/971588892476"
+                href="https://wa.me/971556568937"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -112,15 +112,20 @@ export default function Footer() {
               </li>
               <li className="flex gap-3 items-center">
                 <Phone size={16} className="text-accent shrink-0" />
-                <a href="tel:+971588892476" className="text-white/60 text-sm hover:text-accent transition-colors duration-200">
-                  +971 58 889 2476
+                <a href="tel:+971556568937" className="text-white/60 text-sm hover:text-accent transition-colors duration-200">
+                  +971 55 656 8937
                 </a>
               </li>
-              <li className="flex gap-3 items-center">
-                <Mail size={16} className="text-accent shrink-0" />
-                <a href="mailto:resourcehub.ae@gmail.com" className="text-white/60 text-sm hover:text-accent transition-colors duration-200">
-                  resourcehub.ae@gmail.com
-                </a>
+              <li className="flex gap-3 items-start">
+                <Mail size={16} className="text-accent shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:michael@resourcehubtrading.com" className="text-white/60 text-sm hover:text-accent transition-colors duration-200">
+                    michael@resourcehubtrading.com
+                  </a>
+                  <a href="mailto:business@resourcehubtrading.com" className="text-white/60 text-sm hover:text-accent transition-colors duration-200">
+                    business@resourcehubtrading.com
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

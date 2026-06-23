@@ -44,7 +44,7 @@ export default function HeroSection() {
         {/* Left */}
         <motion.div
           variants={container}
-          initial="hidden"
+          initial={false}
           animate="show"
           className="flex flex-col items-start gap-6"
         >
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
         {/* Right — Stats card */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
           className="hidden lg:block"

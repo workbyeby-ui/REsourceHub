@@ -51,10 +51,10 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="ResourceHub Logo"
-              width={594}
-              height={420}
+              width={500}
+              height={500}
               className="object-contain w-auto"
-              style={{ height: '160px', filter: 'brightness(0) invert(1)' }}
+              style={{ height: '208px', filter: 'brightness(0) invert(1)' }}
               priority
             />
           </Link>
