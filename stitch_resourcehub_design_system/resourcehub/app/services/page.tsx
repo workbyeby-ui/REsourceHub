@@ -22,6 +22,7 @@ import {
   Users,
   Wallet,
   Layers,
+  ArrowRight,
 } from 'lucide-react'
 import SectionHeading from '@/components/ui/SectionHeading'
 import CTABanner from '@/components/home/CTABanner'
@@ -165,11 +166,25 @@ export default function ServicesPage() {
           <p className="text-white/70 text-lg mt-4 max-w-xl mx-auto">
             One partner for the full spectrum of facility maintenance — planned, on-demand, and everything in between.
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-block bg-accent text-white font-semibold px-8 py-4 hover:bg-accent-dark active:scale-95 transition-all duration-200"
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="#services"
+              className="inline-block border-2 border-white text-white font-semibold px-8 py-4 hover:bg-white hover:text-primary active:scale-95 transition-all duration-200"
+            >
+              Explore Services
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-light">
+      <section id="services" className="section-padding bg-light scroll-mt-20">
         <div className="container-max">
           <SectionHeading
             label="What We Do"
@@ -199,6 +214,12 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href="/contact"
+                  className="mt-5 inline-flex items-center gap-2 text-accent text-sm font-semibold hover:gap-3 transition-all duration-200"
+                >
+                  Request a Quote <ArrowRight size={14} />
+                </Link>
               </motion.div>
             ))}
           </div>
