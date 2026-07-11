@@ -4,20 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
-  Wrench,
-  CalendarClock,
-  SprayCan,
-  HardHat,
-  Trees,
-  Flame,
-  Droplets,
-  Zap,
-  PaintRoller,
-  LayoutGrid,
-  DoorOpen,
-  AppWindow,
   Wind,
-  Bug,
+  Droplets,
+  PaintRoller,
+  Zap,
+  Waves,
+  Wrench,
+  Building2,
+  Grid2x2,
   ShieldCheck,
   Users,
   Wallet,
@@ -29,88 +23,52 @@ import CTABanner from '@/components/home/CTABanner'
 
 const services = [
   {
-    icon: Wrench,
-    title: 'General Maintenance',
-    desc: 'Day-to-day upkeep that keeps your facility running without interruption.',
-    items: ['Floor & fixture repairs', 'Carpentry & shelving', 'Door & hinge repairs', 'Awning restoration'],
-  },
-  {
-    icon: CalendarClock,
-    title: 'Scheduled Maintenance',
-    desc: 'Recurring, planned servicing so problems are caught before they cost you.',
-    items: ['Housekeeping schedules', 'Window & floor care', 'High dusting', 'HVAC servicing'],
-  },
-  {
-    icon: SprayCan,
-    title: 'Janitorial Services',
-    desc: 'Comprehensive cleaning that keeps every space presentable and hygienic.',
-    items: ['Housekeeping', 'Carpet & floor care', 'Pre-opening prep', 'Graffiti removal'],
-  },
-  {
-    icon: HardHat,
-    title: 'Construction & Fit-Out',
-    desc: 'Build-outs and refurbishments coordinated across single or multiple sites.',
-    items: ['Build-out projects', 'Store closings', 'Multi-site coordination', 'Remodelling'],
-  },
-  {
-    icon: Trees,
-    title: 'Exterior Maintenance',
-    desc: 'Keeping the outside of your property as sharp as the inside.',
-    items: ['Power washing', 'Wood restoration', 'Signage repair', 'Landscaping'],
-  },
-  {
-    icon: Flame,
-    title: 'Fire Safety',
-    desc: 'Inspections and servicing to keep your premises compliant and protected.',
-    items: ['Emergency light checks', 'Extinguisher inspection', 'Hood maintenance', 'Sprinkler repairs'],
+    icon: Wind,
+    title: 'Air Conditioning & AC Duct Cleaning',
+    desc: 'Keeping your cooling systems efficient, clean, and dependable all year round.',
+    items: ['AC servicing & repairs', 'Duct cleaning', 'Cooling performance checks', 'Equipment sanitation'],
   },
   {
     icon: Droplets,
     title: 'Plumbing',
-    desc: 'Reliable plumbing repairs and preventative servicing on demand.',
-    items: ['Drain cleaning', 'Water heater service', 'Backflow testing', 'Sump pump service'],
+    desc: 'Sanitary installations and reliable pipe repairs for homes and buildings.',
+    items: ['Pipe repairs', 'Sanitary installations', 'Water tank cleaning', 'Motor cleaning'],
   },
   {
     icon: PaintRoller,
     title: 'Painting',
-    desc: 'Interior and exterior finishes, from full repaints to quick touch-ups.',
-    items: ['Full repaints', 'Remodels & refreshes', 'Touch-ups', 'Exterior work'],
+    desc: 'Clean interior and exterior finishes that refresh any space.',
+    items: ['Interior painting', 'Exterior painting', 'Wall finishes', 'Touch-ups'],
   },
   {
     icon: Zap,
     title: 'Electrical',
-    desc: 'Certified electrical work for lighting, signage, and power systems.',
-    items: ['Lighting & LED installs', 'Signage work', 'Breaker service', 'Relamping'],
+    desc: 'Safe electrical work for lighting, fittings, and power systems.',
+    items: ['Wiring & repairs', 'Lighting installation', 'Fault finding', 'Fixtures & fittings'],
   },
   {
-    icon: LayoutGrid,
-    title: 'Floor Care',
-    desc: 'Specialist cleaning, sanding, and refinishing for every floor type.',
-    items: ['Carpet & tile care', 'Sanding & refinishing', 'Laminate & wood', 'Deep cleaning'],
+    icon: Waves,
+    title: 'Swimming Pool Maintenance',
+    desc: 'Keeping pools clean, balanced, and ready to use.',
+    items: ['Pool cleaning', 'Water treatment', 'Pump & filter service', 'Tile & surface care'],
   },
   {
-    icon: DoorOpen,
-    title: 'Door Maintenance',
-    desc: 'Servicing and repairs for every type of door and access point.',
-    items: ['Rolling gate repairs', 'Lock issues', 'Door closures', 'Hardware service'],
+    icon: Wrench,
+    title: 'Handyman',
+    desc: 'Rapid emergency response and quick repairs for everyday fixes.',
+    items: ['Quick repairs', 'Emergency response', 'Fixtures & fittings', 'General odd jobs'],
   },
   {
-    icon: AppWindow,
-    title: 'Glass Maintenance',
-    desc: 'Glass servicing, treatments, and installation for storefronts and interiors.',
-    items: ['Tinting', 'Bulletproof installation', 'Manufacturing', 'Graffiti removal'],
+    icon: Building2,
+    title: 'Property & Building Maintenance',
+    desc: 'Overall building maintenance for commercial and residential properties.',
+    items: ['Preventive maintenance', 'Common area upkeep', 'Facility repairs', 'Commercial & residential'],
   },
   {
-    icon: Wind,
-    title: 'HVAC',
-    desc: 'Keeping climate systems efficient, clean, and dependable year-round.',
-    items: ['Duct cleaning', 'Scheduled servicing', 'Refrigeration', 'Unit replacement'],
-  },
-  {
-    icon: Bug,
-    title: 'Pest Control',
-    desc: 'Scheduled treatments and wildlife management to keep sites protected.',
-    items: ['Scheduled treatments', 'Wildlife removal', 'Preventative control', 'Inspections'],
+    icon: Grid2x2,
+    title: 'Floor & Tiling Works',
+    desc: 'Professional flooring and tiling installation, repair, and finishing.',
+    items: ['Tile installation', 'Floor repairs', 'Grouting', 'Surface finishing'],
   },
 ]
 
@@ -164,7 +122,7 @@ export default function ServicesPage() {
           <span className="block w-10 h-1 bg-accent mx-auto mb-5" />
           <h1 className="text-display text-white font-poppins">Our Services</h1>
           <p className="text-white/70 text-lg mt-4 max-w-xl mx-auto">
-            One partner for the full spectrum of facility maintenance — planned, on-demand, and everything in between.
+            Your friendly local property and building maintenance partner — we fix and maintain across Dubai and the UAE.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -188,8 +146,8 @@ export default function ServicesPage() {
         <div className="container-max">
           <SectionHeading
             label="What We Do"
-            title="Complete Maintenance Solutions"
-            subtitle="From routine upkeep to specialist trades, we cover every maintenance need under one roof so you can focus on your operation."
+            title="Our Services"
+            subtitle="Comprehensive home and building maintenance for both residential and commercial properties — delivered by a skilled, reliable team."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map(({ icon: Icon, title, desc, items }, i) => (
